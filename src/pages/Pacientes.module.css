@@ -1,0 +1,23 @@
+.page { animation: fadeIn 0.25s ease; }
+.ph { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; gap: 16px; }
+.ph h1 { font-family: var(--font-head); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+.ph p { font-size: 12px; color: var(--text2); margin-top: 3px; }
+.actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+.btnPrimary { background: var(--green); color: #080b12; font-weight: 600; padding: 5px 11px; border-radius: 8px; font-size: 11px; border: none; cursor: pointer; font-family: var(--font-body); }
+.btnGhost { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); padding: 5px 11px; border-radius: 8px; font-size: 11px; cursor: pointer; font-family: var(--font-body); }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r2); overflow: hidden; }
+.cardHead { padding: 14px 18px; border-bottom: 1px solid var(--border); }
+.cardTitle { font-family: var(--font-head); font-size: 13px; font-weight: 600; }
+.count { color: var(--text3); font-size: 11px; font-family: var(--font-mono); margin-left: 8px; }
+
+.tbl { width: 100%; border-collapse: collapse; }
+.tbl th { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.8px; padding: 8px 14px; text-align: left; font-family: var(--font-mono); font-weight: 400; }
+.tbl td { padding: 11px 14px; font-size: 12px; border-top: 1px solid var(--border); vertical-align: middle; }
+.tbl tr:first-child td { border-top: none; }
+.tbl tbody tr:hover td { background: rgba(255,255,255,0.015); }
+
+.patName { font-weight: 500; font-size: 13px; }
+.mono { font-family: var(--font-mono); font-size: 11px; color: var(--text2); }
+.proxNext { color: var(--green) !important; }
+.avaliacao { color: var(--amber); font-size: 12px; }

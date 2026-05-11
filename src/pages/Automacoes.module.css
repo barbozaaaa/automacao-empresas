@@ -1,0 +1,55 @@
+.page { animation: fadeIn 0.25s ease; }
+.ph { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; gap: 16px; }
+.ph h1 { font-family: var(--font-head); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+.ph p { font-size: 12px; color: var(--text2); margin-top: 3px; }
+.actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+.live { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--green); font-family: var(--font-mono); }
+.liveDot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: livePulse 2s infinite; }
+.btnPrimary { background: var(--green); color: #080b12; font-weight: 600; padding: 5px 11px; border-radius: 8px; font-size: 11px; border: none; cursor: pointer; font-family: var(--font-body); }
+
+.flows { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.flow {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 18px;
+  transition: all 0.2s;
+}
+
+.flow.on {
+  border-color: rgba(0,229,160,0.25);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(0,229,160,0.02) 100%);
+}
+
+.flowHead { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+.flowIcon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.flowName { font-family: var(--font-head); font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.flowDesc { font-size: 11px; color: var(--text2); line-height: 1.6; }
+
+.metrics { display: flex; gap: 14px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.metric { font-size: 10px; color: var(--text3); }
+.metric span { display: block; font-family: var(--font-mono); font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 1px; }
+
+.tog {
+  width: 36px; height: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border2);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s;
+  background: var(--surface3);
+  flex-shrink: 0;
+}
+.tog::after {
+  content: '';
+  position: absolute;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  top: 2px; left: 2px;
+  transition: left 0.25s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.togOn { background: var(--green); border-color: var(--green); box-shadow: 0 0 12px rgba(0,229,160,0.3); }
+.togOn::after { left: 18px; }

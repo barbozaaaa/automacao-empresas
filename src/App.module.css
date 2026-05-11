@@ -1,0 +1,8 @@
+.main {
+  margin-left: var(--sidebar);
+  padding: 28px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}

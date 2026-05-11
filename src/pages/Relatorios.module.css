@@ -1,0 +1,39 @@
+.page { animation: fadeIn 0.25s ease; }
+.ph { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; gap: 16px; }
+.ph h1 { font-family: var(--font-head); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+.ph p { font-size: 12px; color: var(--text2); margin-top: 3px; }
+
+.btnPrimary { background: var(--green); color: #080b12; font-weight: 600; padding: 7px 14px; border-radius: 8px; font-size: 12px; border: none; cursor: pointer; font-family: var(--font-body); flex-shrink: 0; }
+.btnGhost { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); padding: 5px 11px; border-radius: 8px; font-size: 11px; cursor: pointer; font-family: var(--font-body); white-space: nowrap; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r2); overflow: hidden; }
+.cardHead { padding: 14px 18px; border-bottom: 1px solid var(--border); }
+.cardTitle { font-family: var(--font-head); font-size: 13px; font-weight: 600; }
+.cardBody { padding: 14px 18px; }
+
+.bigVal { font-family: var(--font-mono); font-size: 30px; font-weight: 500; letter-spacing: -1px; }
+.subVal { font-size: 11px; color: var(--text2); margin: 4px 0 18px; display: flex; align-items: center; gap: 6px; }
+.up { color: var(--green); }
+
+.chart { display: flex; align-items: flex-end; gap: 6px; height: 60px; }
+.barCol { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.barFill { width: 100%; border-radius: 4px 4px 0 0; transition: height 0.6s cubic-bezier(.34,1.56,.64,1); }
+.chartLabels { display: flex; justify-content: space-between; font-size: 10px; color: var(--text3); font-family: var(--font-mono); margin-top: 6px; }
+
+.progBar { height: 6px; background: var(--surface3); border-radius: 3px; overflow: hidden; margin: 10px 0; }
+.progFill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--green), var(--cyan)); transition: width 0.8s cubic-bezier(.34,1.56,.64,1); }
+.progNote { font-size: 11px; color: var(--text2); }
+
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+.metricRow { display: flex; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.metricRow:last-child { border-bottom: none; }
+.metricVal { font-family: var(--font-mono); font-size: 13px; font-weight: 500; margin-left: auto; flex-shrink: 0; }
+
+.rptRow { display: flex; align-items: center; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--border); }
+.rptRow:last-child { border-bottom: none; }
+.rptIco { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.rptInfo { flex: 1; }
+.rptName { font-size: 13px; font-weight: 500; }
+.rptMeta { font-size: 10px; color: var(--text3); margin-top: 2px; font-family: var(--font-mono); }
