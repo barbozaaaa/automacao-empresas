@@ -22,12 +22,29 @@ export default function Login() {
 
     if (tab === 'login') {
       const { error } = await signIn(email, password)
-      if (error) setError(error)
+      if (error) {
+        if (error.includes('fetch') || error.includes('network') || error.includes('Failed'))
+          setError('Erro de conexão com o servidor. Verifique sua internet ou tente novamente.')
+        else if (error.includes('Invalid login'))
+          setError('Email ou senha incorretos.')
+        else
+          setError(error)
+      }
     } else {
       if (!clinicName.trim()) { setError('Informe o nome da clínica.'); setLoading(false); return }
       const { error } = await signUp(email, password, clinicName)
-      if (error) setError(error)
-      else setSuccess('Conta criada! Verifique seu e-mail para confirmar o cadastro.')
+      if (error) {
+        if (error.includes('fetch') || error.includes('network') || error.includes('Failed'))
+          setError('Erro de conexão. As variáveis de ambiente podem não estar configuradas no servidor.')
+        else if (error.includes('already registered'))
+          setError('Este email já está cadastrado. Faça login.')
+        else if (error.includes('password'))
+          setError('A senha deve ter pelo menos 6 caracteres.')
+        else
+          setError(error)
+      } else {
+        setSuccess('Conta criada! Verifique seu e-mail para confirmar o cadastro.')
+      }
     }
 
     setLoading(false)
