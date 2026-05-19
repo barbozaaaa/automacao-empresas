@@ -1,22 +1,13 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+  || 'https://csesyypnvcvodwhgkyes.supabase.co'
 
-if (!supabaseUrl || !supabaseKey) {
-  console.error(
-    '[Flow] ERRO: variáveis de ambiente não encontradas.\n' +
-    'VITE_SUPABASE_URL:', supabaseUrl ? '✅' : '❌ FALTANDO',
-    '\nVITE_SUPABASE_ANON_KEY:', supabaseKey ? '✅' : '❌ FALTANDO'
-  )
-}
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+  || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNzZXN5eXBudmN2b2R3aGdreWVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg3MDE1MTAsImV4cCI6MjA5NDI3NzUxMH0.xSFaJgYoTMHsDGbZiVkGSkyOVfZjnS3Vc0cdJQ83jVI'
 
-export const supabase = createClient(
-  supabaseUrl  ?? 'https://placeholder.supabase.co',
-  supabaseKey  ?? 'placeholder'
-)
+export const supabase = createClient(supabaseUrl, supabaseKey)
 
-export const isSupabaseConfigured =
-  Boolean(supabaseUrl && supabaseKey && !supabaseUrl.includes('placeholder'))
+export const isSupabaseConfigured = true
 
 export const DEMO_CLINIC_ID = 'aaaaaaaa-0000-0000-0000-000000000001'

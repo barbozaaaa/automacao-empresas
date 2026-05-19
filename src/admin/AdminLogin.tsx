@@ -17,7 +17,7 @@ export default function AdminLogin({ onLogin }: Props) {
 
     await new Promise(r => setTimeout(r, 600))
 
-    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD as string
+    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD || 'clinicaflow@adm2026'
     if (password === adminPassword) {
       sessionStorage.setItem('flow_admin', '1')
       onLogin()
